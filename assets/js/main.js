@@ -2,6 +2,7 @@ let mymap;
 let lyrOSM;
 let mrkCurrentLocation;
 let panControl;
+let zoomSlider;
 
 mymap = L.map('mapdiv', { center: [52.22758, 16.82593], zoom: 13 });
 
@@ -29,5 +30,5 @@ mymap.on('locationerror', function (e) {
 });
 
 panControl = L.control.pan().addTo(mymap);
-
+zoomSlider = L.control.zoomslider().addTo(mymap);
 

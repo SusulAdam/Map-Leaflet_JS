@@ -3,6 +3,7 @@ let lyrOSM;
 let mrkCurrentLocation;
 let panControl;
 let zoomSlider;
+let measure;
 
 mymap = L.map('mapdiv', { center: [52.22758, 16.82593], zoom: 13 });
 
@@ -31,4 +32,7 @@ mymap.on('locationerror', function (e) {
 
 panControl = L.control.pan().addTo(mymap);
 zoomSlider = L.control.zoomslider().addTo(mymap);
+
+measure = L.control.polylineMeasure({ position: 'bottomleft', unit: 'metres', showBearings: true, clearMeasurementsOnStop: false, showClearControl: false, showUnitControl: false }).addTo(mymap);
+
 

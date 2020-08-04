@@ -4,6 +4,7 @@ let mrkCurrentLocation;
 let panControl;
 let zoomSlider;
 let measure;
+let scale;
 
 mymap = L.map('mapdiv', { center: [52.22758, 16.82593], zoom: 13 });
 
@@ -30,9 +31,17 @@ mymap.on('locationerror', function (e) {
     alert("Location was not found");
 });
 
+
+scale = L.control.scale({ imperial: false }).addTo(mymap);
+
+
+
+// PLUGINS
 panControl = L.control.pan().addTo(mymap);
 zoomSlider = L.control.zoomslider().addTo(mymap);
 
+// plugin where can you measere for example section of the road
 measure = L.control.polylineMeasure({ position: 'bottomleft', unit: 'metres', showBearings: true, clearMeasurementsOnStop: false, showClearControl: false, showUnitControl: false }).addTo(mymap);
+
 
 

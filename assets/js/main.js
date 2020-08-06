@@ -5,6 +5,10 @@ let panControl;
 let zoomSlider;
 let measure;
 let scale;
+let ctlLegend;
+let Basemaps;
+let osm2;
+let minimap
 
 mymap = L.map('mapdiv', { center: [52.22758, 16.82593], zoom: 13 });
 
@@ -42,6 +46,34 @@ zoomSlider = L.control.zoomslider().addTo(mymap);
 
 // plugin where can you measere for example section of the road
 measure = L.control.polylineMeasure({ position: 'bottomleft', unit: 'metres', showBearings: true, clearMeasurementsOnStop: false, showClearControl: false, showUnitControl: false }).addTo(mymap);
+
+
+// Map layers
+lyrOSM = L.tileLayer.provider('OpenStreetMap.Mapnik');
+lyrTopo = L.tileLayer.provider('OpenTopoMap');
+lyrImagery = L.tileLayer.provider('Esri.WorldImagery');
+lyrMtbMap = L.tileLayer.provider('MtbMap');
+lyrBandW = L.tileLayer.provider('Stamen.TonerLite');
+mymap.addLayer(lyrOSM);
+
+Basemaps = {
+    "Street Map": lyrOSM,
+    "Topograpical Map": lyrTopo,
+    "Ortofotomapa": lyrImagery,
+    "MtbMap": lyrMtbMap,
+    "Stamen.TonerLite": lyrBandW,
+
+};
+
+ctlLegend = L.control.layers(Basemaps).addTo(mymap);
+
+// Mini map
+
+osm2 = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');
+
+miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(mymap);
+
+
 
 
 

@@ -1,3 +1,7 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
 html,
 body,
 #mapdiv {
@@ -5,4 +9,58 @@ body,
     height: 100%;
     padding: 0;
     margin: 0;
+}
+
+.side-bar {
+    position: absolute;
+    top: 60%;
+    padding: 5px;
+    z-index: 1400;
+
+}
+
+.btn-style {
+    background-color: #008CBA;
+    border: none;
+    color: #ffffff;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.7px;
+    font-weight: bold;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 4px;
+}
+
+.btn-style:hover {
+    opacity: 0.6;
+}
+
+.popup {
+    position: absolute;
+    width: 600px;
+    z-index: 1400;
+    background-color: #ffffff;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    -webkit-box-shadow: 10px -9px 7px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -9px 7px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -9px 7px 0px rgba(0, 0, 0, 0.75);
+    display: none;
+}
+
+
+.popup__close-btn {
+    position: absolute;
+    right: 0;
+}
+
+li {
+    list-style: square;
+    padding-bottom: 7px;
 }

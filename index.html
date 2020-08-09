@@ -10,12 +10,34 @@
     <link rel="stylesheet" href="assets/plugins/ZoomSlider/L.Control.Zoomslider.css">
     <link rel="stylesheet" href="assets/plugins/Measurment/Leaflet.PolylineMeasure.css">
     <link rel="stylesheet" href="assets/plugins/minimap/">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
+    <div class="side-bar">
+        <button class="side-bar__btn btn-style">Map Description</button>
+    </div>
+
+    <div class="popup">
+        <ul>
+            <li>Click 'l' if you want to find your location</li>
+            <li>In the upper left corner there are buttons that allow you to zoom in / out the map. You can also use a
+                scroll on the mouse</li>
+            <li>In the lower left corner, apart from the scale, there is a length meter. Click on it and select the
+                points between which you want to measure the distance. If you want to remove any point, press shift and
+                select that point.</li>
+            <li>In the upper right corner there are diffrent layers of map</li>
+            <li>In the lower right corner there are minimap</li>
+
+        </ul>
+        <button class='popup__close-btn btn-style'>Close description</button>
+    </div>
+
     <div id="mapdiv"></div>
+
+
 
 
     <script src="assets/leaflet/leaflet-src.js"></script>

@@ -8,9 +8,10 @@ let scale;
 let ctlLegend;
 let Basemaps;
 let osm2;
-let minimap
+let minimap;
 
-mymap = L.map('mapdiv', { center: [52.22758, 16.82593], zoom: 13 });
+
+mymap = L.map('mapdiv', { center: [50.061603, 19.936591], zoom: 13, attributionControl: false });
 
 //link to the map preview
 lyrOSM = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
@@ -73,6 +74,26 @@ osm2 = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');
 
 miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(mymap);
 
+
+// Popup
+const openbtn = document.querySelector('.side-bar__btn');
+const closeBtn = document.querySelector('.popup__close-btn');
+const popup = document.querySelector('.popup');
+
+
+
+const openPopUp = function () {
+    popup.style.display = 'block';
+    openbtn.style.display = 'none';
+}
+
+const closePopUp = function () {
+    popup.style.display = 'none';
+    openbtn.style.display = 'block';
+}
+
+closeBtn.addEventListener('click', closePopUp);
+openbtn.addEventListener('click', openPopUp);
 
 
 

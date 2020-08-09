@@ -10,14 +10,16 @@ let Basemaps;
 let osm2;
 let minimap;
 
-
-mymap = L.map('mapdiv', { center: [50.061603, 19.936591], zoom: 13, attributionControl: false });
+mymap = L.map('mapdiv', {
+    center: [50.061603, 19.936591],
+    zoom: 13,
+    attributionControl: false
+});
 
 //link to the map preview
 lyrOSM = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 //displaying the map in the browser
 mymap.addLayer(lyrOSM);
-
 
 // keypress 'l' = my location
 mymap.on('keypress', function (e) {
@@ -36,17 +38,21 @@ mymap.on('locationerror', function (e) {
     alert("Location was not found");
 });
 
-
 scale = L.control.scale({ imperial: false }).addTo(mymap);
-
-
 
 // PLUGINS
 panControl = L.control.pan().addTo(mymap);
 zoomSlider = L.control.zoomslider().addTo(mymap);
 
 // plugin where can you measere for example section of the road
-measure = L.control.polylineMeasure({ position: 'bottomleft', unit: 'metres', showBearings: true, clearMeasurementsOnStop: false, showClearControl: false, showUnitControl: false }).addTo(mymap);
+measure = L.control.polylineMeasure({
+    position: 'bottomleft',
+    unit: 'metres',
+    showBearings: true,
+    clearMeasurementsOnStop: false,
+    showClearControl: false,
+    showUnitControl: false
+}).addTo(mymap);
 
 
 // Map layers
@@ -63,24 +69,18 @@ Basemaps = {
     "Ortofotomapa": lyrImagery,
     "MtbMap": lyrMtbMap,
     "Stamen.TonerLite": lyrBandW,
-
 };
 
 ctlLegend = L.control.layers(Basemaps).addTo(mymap);
 
 // Mini map
-
 osm2 = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');
-
 miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(mymap);
-
 
 // Popup
 const openbtn = document.querySelector('.side-bar__btn');
 const closeBtn = document.querySelector('.popup__close-btn');
 const popup = document.querySelector('.popup');
-
-
 
 const openPopUp = function () {
     popup.style.display = 'block';

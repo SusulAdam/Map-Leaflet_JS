@@ -16,6 +16,10 @@ mymap = L.map('mapdiv', {
     attributionControl: false
 });
 
+
+// Adding marker to the map
+// L.marker([50.061603, 19.936591]).addTo(mymap);
+
 //link to the map preview
 lyrOSM = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 //displaying the map in the browser

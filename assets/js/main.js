@@ -9,6 +9,8 @@ let ctlLegend;
 let Basemaps;
 let osm2;
 let minimap;
+let searchControl;
+let results;
 
 mymap = L.map('mapdiv', {
     center: [50.061603, 19.936591],
@@ -101,4 +103,13 @@ openbtn.addEventListener('click', openPopUp);
 
 
 
+searchControl = L.esri.Geocoding.geosearch().addTo(mymap);
 
+results = L.layerGroup().addTo(mymap);
+
+searchControl.on('results', function (data) {
+    results.clearLayers();
+    for (var i = data.results.length - 1; i >= 0; i--) {
+        results.addLayer(L.marker(data.results[i].latlng));
+    }
+});

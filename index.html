@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="assets/plugins/Measurment/Leaflet.PolylineMeasure.css">
     <link rel="stylesheet" href="assets/plugins/minimap/">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.3.3/dist/esri-leaflet-geocoder.css"
+        integrity="sha512-IM3Hs+feyi40yZhDH6kV8vQMg4Fh20s9OzInIIAc4nx7aMYMfo+IenRUekoYsHZqGkREUgx0VvlEsgm7nCDW9g=="
+        crossorigin="">
+
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -25,6 +30,7 @@
             <li>Click 'l' if you want to find your location</li>
             <li>In the upper left corner there are buttons that allow you to zoom in / out the map. You can also use a
                 zoom map by mouse</li>
+            <li>After clicking on the magnifying glass and entering the address, you will find the location</li>
             <li>In the lower left corner, apart from the scale, there is a length meter. Click on it and select the
                 points between which you want to measure the distance. If you want to remove any point, press shift and
                 select that point.</li>
@@ -39,8 +45,9 @@
 
 
 
-
     <script src="assets/leaflet/leaflet-src.js"></script>
+    <script src="assets/plugins/Geocoder/esri-leaflet.js"></script>
+    <script src="assets/plugins/Geocoder/esri-leaflet-geocoder.js"></script>
     <script src="assets/plugins/PanControls/plugins/L.Control.Pan.js"></script>
     <script src="assets/plugins/ZoomSlider/L.Control.Zoomslider.js"></script>
     <script src="assets/plugins/Measurment/Leaflet.PolylineMeasure.js"></script>

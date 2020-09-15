@@ -3,9 +3,17 @@
 This project shows free map with several functions.
 the map is free and uses the free Leaflet library.
 
-* Click 'l' if you want to find your location
+
+## Running
+
+Download files and run index.html
+
+## Description
+
+* Click ';' if you want to find your location
 * In the upper left corner there are buttons that allow you to zoom in / out the map.
 You can also use a scroll zoom map by mouse
+* After clicking on the magnifying glass and entering the address, you will find the location
 * In the lower left corner, apart from the scale, there is a length meter.
 Click on it and select the points between which you want to measure the distance.
 If you want to remove any point, press shift and select that point.

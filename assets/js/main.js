@@ -29,7 +29,7 @@ mymap.addLayer(lyrOSM);
 
 // keypress 'l' = my location
 mymap.on('keypress', function (e) {
-    if (e.originalEvent.key == "l") {
+    if (e.originalEvent.key == ";") {
         mymap.locate();
     }
 });

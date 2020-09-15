@@ -12,12 +12,16 @@ let minimap;
 let searchControl;
 let results;
 
-mymap = L.map('mapdiv', {
-    center: [50.061603, 19.936591],
-    zoom: 13,
-    attributionControl: false
-});
 
+// Another option to implement my map
+// mymap = L.map('mapdiv', {
+//     center: [50.061603, 19.936591],
+//     zoom: 13,
+//     attributionControl: false
+// });
+
+
+mymap = L.map('mapdiv').setView([50.061603, 19.936591], 5);
 
 // Adding marker to the map
 // L.marker([50.061603, 19.936591]).addTo(mymap);

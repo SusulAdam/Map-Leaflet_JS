@@ -12,7 +12,6 @@ let minimap;
 let searchControl;
 let results;
 
-
 // Another option to implement my map
 // mymap = L.map('mapdiv', {
 //     center: [50.061603, 19.936591],
@@ -64,7 +63,6 @@ measure = L.control.polylineMeasure({
     showUnitControl: false
 }).addTo(mymap);
 
-
 // Map layers
 lyrOSM = L.tileLayer.provider('OpenStreetMap.Mapnik');
 lyrTopo = L.tileLayer.provider('OpenTopoMap');
@@ -105,12 +103,9 @@ const closePopUp = function () {
 closeBtn.addEventListener('click', closePopUp);
 openbtn.addEventListener('click', openPopUp);
 
-
-
+//Geocode plugin
 searchControl = L.esri.Geocoding.geosearch().addTo(mymap);
-
 results = L.layerGroup().addTo(mymap);
-
 searchControl.on('results', function (data) {
     results.clearLayers();
     for (var i = data.results.length - 1; i >= 0; i--) {

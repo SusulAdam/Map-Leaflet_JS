@@ -14,7 +14,7 @@ Download files and run index.html
 * In the upper left corner there are buttons that allow you to zoom in / out the map.
 You can also use a scroll zoom map by mouse
 * After clicking on the magnifying glass and entering the address, you will find the location,
-keep in mind that if you want to find a certain location, the location should be on the screen. If the zoom value is too high - it will not find the location. If I cannot find the location, reduce the zoom.
+keep in mind that if you want to find a certain location, the location should be on the screen. If the zoom value is too high - it will not find the location. If you can not find the location, reduce the zoom.
 * In the lower left corner, apart from the scale, there is a length meter.
 Click on it and select the points between which you want to measure the distance.
 If you want to remove any point, press shift and select that point.

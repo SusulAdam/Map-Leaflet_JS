@@ -16,7 +16,6 @@ body,
     top: 75%;
     padding: 5px;
     z-index: 1400;
-
 }
 
 .btn-style {
@@ -52,7 +51,6 @@ body,
     -moz-box-shadow: 10px -9px 7px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 10px -9px 7px 0px rgba(0, 0, 0, 0.75);
     display: none;
-
 }
 
 @media(max-width: 650px) {
@@ -62,13 +60,11 @@ body,
     }
 }
 
-
 @media(max-width: 450px) {
     .leaflet-control-zoomslider {
         display: none;
     }
 }
-
 
 .popup__close-btn {
     position: absolute;
@@ -83,7 +79,6 @@ li {
 .geocoder-control-input {
     margin: 5px 0 0 23px;
 }
-
 
 @media(max-width: 500px) {
     .leaflet-control-minimap {
